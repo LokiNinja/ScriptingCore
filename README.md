@@ -8,6 +8,10 @@ Description:  A scripting core for a game engine.  It utilizes an event manager 
 across the C++/Script boundary.  It can be extended to add support to more scripting languages by fleshing out the supplied
 interfaces.  Demo implements interface for Lua.
 
+Issues:  There has been an issue brought to my attention regarding the LuaPlus libraries.  For whatever reason they
+do not run correctly on certain machines.  This is an external library that was not written by us and, as such, we
+can not fix this issue.  The demo application does run correctly on the majority of machines it was tested on, however.
+
 Commands:
 String: Entering this command will allow the user to essentially enter ‘interactive’ mode with the core.  This will allow them to enter up to 1024 characters of script (Lua in this case) or to run with fewer than 1024 characters the prompt can be terminated with an ‘@’ symbol. A description of functions exported to Lua can be found below.
 File: This command will allow the user to run a preexisting script file found in the same directory as the demo executable.  One great use for this is to have a script file will all of the event callback function in it.  This can be run upon initialization and then events will automatically be delegated to the correct functions as they are dispatched.
